@@ -1,8 +1,10 @@
+"use client";
 import React from 'react'
 import Image from 'next/image'
 import { Http2ServerRequest } from 'http2'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { SignInButton } from '@clerk/nextjs'
 const menuOptions=[
 {
   name:'Home',
@@ -36,7 +38,10 @@ function Header() {
         </Link>
         ))}
       </div>
-      <Button>Get Started</Button>
+     <SignInButton mode="modal">
+        <Button>Get Started</Button>
+     </SignInButton>
+    
     </div>
   );
 }
