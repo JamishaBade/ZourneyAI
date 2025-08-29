@@ -27,7 +27,7 @@ function Header() {
         <h2 className="font-bold text-2xl">ZourneyAI</h2>
       </div>
 
-<div className='flex gap-5 items-center border border-gray-400 rounded-full p-1'>
+<div className='flex gap-5 items-center '>
         {menuOptions.map((menu, index) => (
         <Link key={index} href={menu.path}>
         <h2 className="text-lg transition hover:scale-105 hover:text-[var(--primary)]">
