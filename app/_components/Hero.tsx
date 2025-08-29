@@ -1,8 +1,16 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { CompassIcon, Divide, Globe2, Package2Icon, PiggyBankIcon, PlaneIcon, Send } from "lucide-react";
-import { Purple_Purse } from "next/font/google";
-
+import {
+  CompassIcon,
+  Divide,
+  Globe2,
+  Package2Icon,
+  PiggyBankIcon,
+  PlaneIcon,
+  Send,
+} from "lucide-react";
+import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
+import { ArrowDown } from "lucide-react";
 const suggestions = [
   {
     title: "Create New Trip",
@@ -55,16 +63,33 @@ function Hero() {
 
       {/* Suggestion list */}
 
-      <div className='flex gap-6'>
+      <div className="flex gap-6">
         {suggestions.map((suggestions, index) => (
-          <div key={index} className='flex items-center gap-2 border border-gray-100 rounded-full p-2 hover:bg-[var(--primary)] hover:text-white'>
+          <div
+            key={index}
+            className="flex items-center gap-2 border border-gray-100 rounded-full p-2 hover:bg-[var(--primary)] hover:text-white"
+          >
             {suggestions.icon}
             <h2>{suggestions.title}</h2>
           </div>
         ))}
       </div>
 
+      <h2 className='my-7 mt-14 flex gap-2 text-center'>
+        Not sure where to begin? <strong>See how it works</strong> <ArrowDown></ArrowDown>
+      </h2>
       {/* Video Section */}
+      <div className="w-full max-w-5xl mt-15">
+
+         <HeroVideoDialog
+        className="block dark:visible "
+        animationStyle="from-center"
+        videoSrc="https://www.youtube.com/watch?v=sXRDL-EPtrM&t=723s"
+        thumbnailSrc="https://mma.prnewswire.com/media/2401528/1_MindtripProduct.jpg?p=facebook"
+        thumbnailAlt="Dummy Video Thumbnail"
+      />
+      </div>
+     
     </div>
   );
 }
