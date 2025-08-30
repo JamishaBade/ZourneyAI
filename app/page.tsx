@@ -3,6 +3,8 @@
 import Hero from "./_components/Hero";
 import { PopularCityList } from "./_components/PopularCityList";
 import Header from "./_components/Header";
+import { Globe } from "@/components/magicui/globe";
+import GlobeObj from "./_components/GlobeObject";
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
     <Header></Header>
    <Hero/>
    <PopularCityList/>
+  
    </div>
   );
 }

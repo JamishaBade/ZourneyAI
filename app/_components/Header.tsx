@@ -21,7 +21,7 @@ const menuOptions=[
 
 function Header() {
   return (
-    <div className='flex justify-between item-center p-4  '>
+    <div className="absolute top-0 left-0 w-full flex justify-between items-center p-4 z-50 bg-white/70 backdrop-blur-md">
       <div className="flex gap-3">
         {/* Logo */}
         <Image src="/logo.svg" alt="logo" width={30} height={30} />
@@ -29,22 +29,23 @@ function Header() {
         <h2 className="font-bold text-2xl">ZourneyAI</h2>
       </div>
 
-<div className='flex gap-5 items-center '>
+      <div className="flex gap-5 items-center">
         {menuOptions.map((menu, index) => (
-        <Link key={index} href={menu.path}>
-        <h2 className="text-lg transition hover:scale-105 hover:text-[var(--primary)]">
-        {menu.name}
-        </h2>          
-        </Link>
+          <Link key={index} href={menu.path}>
+            <h2 className="text-lg transition hover:scale-105 hover:text-[var(--primary)]">
+              {menu.name}
+            </h2>
+          </Link>
         ))}
       </div>
-     <SignInButton mode="modal">
+
+      <SignInButton mode="modal">
         <Button>Get Started</Button>
-     </SignInButton>
-    
+      </SignInButton>
     </div>
   );
 }
+
 
 
 export default Header
