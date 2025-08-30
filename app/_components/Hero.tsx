@@ -125,6 +125,7 @@ import {
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
+import GlobeObj from "./GlobeObject";
 const suggestions = [
   {
     title: "Create New Trip",
@@ -169,6 +170,7 @@ function Hero() {
           between, all handled for you.
         </p>
       </div>
+       <GlobeObj/>
 
       {/* Input Box */}
       <div className="w-full max-w-3xl">
